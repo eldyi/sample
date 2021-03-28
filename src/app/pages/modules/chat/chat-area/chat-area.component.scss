@@ -1,0 +1,12 @@
+ion-content {
+  position: absolute;
+  margin: 0.25rem;
+
+  ion-button {
+    position: absolute;
+    width: 90vw;
+    ion-icon {
+      margin: 0 0.5rem;
+    }
+  }
+}

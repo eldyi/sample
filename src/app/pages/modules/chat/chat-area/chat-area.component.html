@@ -1,0 +1,11 @@
+<ion-content class="bg">
+  <ng-container *ngFor="let msg of messageList">
+    <ion-item lines="none">
+      <div class="message-area">{{ msg }}</div>
+    </ion-item>
+  </ng-container>
+  <ion-input [(ngModel)]="newMessage"></ion-input>
+  <ion-button shape="round" color="tertiary" (click)="sendNewMsg()"
+    >Send Message<ion-icon name="send"></ion-icon
+  ></ion-button>
+</ion-content>

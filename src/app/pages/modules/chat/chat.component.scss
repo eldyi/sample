@@ -1,0 +1,15 @@
+@import "./../../../../assets/scss/style.scss";
+.header {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+
+  color: $primary;
+  text-align: center;
+  h2 {
+    font-size: 20px;
+  }
+}
+ion-content {
+  margin: 0.5rem;
+}

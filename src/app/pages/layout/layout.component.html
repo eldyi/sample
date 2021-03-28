@@ -1,0 +1,12 @@
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-content fullscreen>
+  <router-outlet></router-outlet>
+</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom" *ngIf="showTabs">
+    <ion-tab-button tab="chat">
+      <ion-icon class="icons" name="chatbubble-ellipses-outline"></ion-icon>
+      <ion-label style="font-size: 10px">Chats</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
