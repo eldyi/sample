@@ -7,14 +7,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/login/login.module').then((m) => m.LoginModule),
   },
-  {
-    path: 'chat',
-    loadChildren: () =>
-      import('./pages/modules/chat/chat.module').then((m) => m.ChatModule),
-  },
+
   {
     path: '',
-    redirectTo: 'chat',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {

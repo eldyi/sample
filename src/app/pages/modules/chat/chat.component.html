@@ -1,11 +1,24 @@
 <ion-header>
   <div class="header"><h2>HQ MESSAGING APP TEST</h2></div>
 </ion-header>
-<ion-content>
-  <app-chat-area></app-chat-area>
-  <ion-footer no-padding style="margin:0rem 0rem!Important;">
-    <ion-input placeholder="Type in Message" [(ngModel)]="newMessage"> <ion-button vertical="bottom" shape="round" color="tertiary" (click)="sendNewMsg()" ><ion-icon name="send"></ion-icon>
-    </ion-button>
-  </ion-input>
-  </ion-footer>
+<ion-content class="bg">
+  <div class="main-container">
+    <div class="text-area">
+      <ng-container *ngFor="let msg of messageList">
+        <ion-item lines="none">
+          <div class="message-area">{{ msg }}</div>
+        </ion-item>
+      </ng-container>
+    </div>
+    <div class="bottom-cont">
+      <ion-input
+        [(ngModel)]="newMessage"
+        placeholder="Type in Message"
+      ></ion-input>
+      <ion-buttons
+        ><ion-button (click)="sendNewMsg()"
+          ><ion-icon color="tertiary" name="send"></ion-icon></ion-button
+      ></ion-buttons>
+    </div>
+  </div>
 </ion-content>
