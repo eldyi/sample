@@ -4,8 +4,16 @@
       <div class="message-area">{{ msg }}</div>
     </ion-item>
   </ng-container>
-  <ion-input [(ngModel)]="newMessage"></ion-input>
-  <ion-button shape="round" color="tertiary" (click)="sendNewMsg()"
-    >Send Message<ion-icon name="send"></ion-icon
-  ></ion-button>
+
+
+
+
+
+
+  
+  <ion-footer no-padding style="margin:0rem 0rem!Important;">
+  <ion-input placeholder="Type in Message" [(ngModel)]="newMessage"> <ion-button vertical="bottom" shape="round" color="tertiary" (click)="sendNewMsg()" ><ion-icon name="send"></ion-icon>
+  </ion-button>
+</ion-input>
+</ion-footer>
 </ion-content>

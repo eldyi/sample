@@ -1,8 +1,9 @@
 import { Observable } from 'rxjs';
 import { HttpsService } from './../../../../service/https.service';
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, ViewChild } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { ChatserviceService } from 'src/app/service/chat-service/chatservice.service';
+import { IonContent } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,7 @@ import { ChatserviceService } from 'src/app/service/chat-service/chatservice.ser
 })
 export class ChatAreaComponent implements OnInit {
   newMessage: string;
+  @ViewChild(IonContent) content: IonContent
   constructor(
     private socket: Socket,
     private http: HttpsService,
@@ -34,5 +36,7 @@ export class ChatAreaComponent implements OnInit {
   sendNewMsg() {
     this.chatService.sendMessage(this.newMessage);
     this.newMessage = '';
+
+    this.content.scrollToBottom(200);
   }
 }
