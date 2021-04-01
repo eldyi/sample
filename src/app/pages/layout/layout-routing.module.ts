@@ -13,6 +13,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('../modules/chat/chat.module').then((m) => m.ChatModule),
       },
+     
     ],
   },
 ];
